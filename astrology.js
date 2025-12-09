@@ -13,14 +13,14 @@ const constellationData = [
     },
     {
         title: "Astral Formation: Infinite Beginnings",
-        subtitle: "THE BEGINNINGS OF GALACTIC CONSOLDATION AND EXISTENCE",
+        subtitle: "THE BEGINNINGS OF GALACTIC CONSOLIDATION AND EXISTENCE",
         body:
         `The galactic fragments danced in cascading circles, swirling heavy and slow in the ether.
         The swirls were beauty itself; consolidated, focused, and channeled into beings.
         Cerulean icy hunks fused with fragmented shards to produce heavenly spheres of new purpose.
         They were beings of adjacent predecessors in a beautiful borrowing of astral matter.
-        From the expansive and restless galati space, the primordial soup of stars clashed into new life, and the new bodies in space yielded continuous cosmic reproduction.
-        The vacumm of space was now the mother to millions of free, beautiful objects.`
+        From the expansive and restless galactic space, the primordial soup of stars clashed into new life, and the new bodies in space yielded continuous cosmic reproduction.
+        The vacuum of space was now the mother to millions of free, beautiful objects.`
     },
     {
         title: "Astral Dependency: Our Orbits",
@@ -64,7 +64,7 @@ const constellationData = [
         As each atom of the universal lighthouse sparked and died, they observed the universe a final time. A dying, final gaze at the world it shone for.
         And at the end, all that it saw was beauty. The death of beauty witnessing beauty in a final act, basking in the privilege of the lightyears it twinkled for.
         The galactic implosion was a finite end in the beautiful expanse, yet the years the planet spent observing the brilliant star would last.
-        And all the planet would know was beauty. And all the star would know was beauty. Through the pain of accepting finite life and finite beauty, infinite gratitude spurned.
+        And all the planet would know was beauty. And all the star would know was beauty. Through the pain of accepting finite life and finite beauty, infinite gratitude spurred.
         The beauty of the final act of a supernova.`
     },
     {
@@ -72,9 +72,9 @@ const constellationData = [
         subtitle: "The infinite process of stabilizing after an explosion",
         body: `From a singularity's eruption to a supernova's demise, the universe was perilous, unpredictable, and deceiving.
         Cosmic circles held fallacious appearances and galactic deaths held deceivingly beautiful sequences.
-        Still through beautiful death and constructive collision, the ubiverse sparkled and grew through pain and beauty.
+        Still through beautiful death and constructive collision, the universe sparkled and grew through pain and beauty.
         The erratic existence of the delicate new world quietly morphed into beautiful structure.
-        Finiteness and unpredictability was no limit, but instead a timeframe in which astral beauty could be seen, absorbed, and known.
+        Finiteness and unpredictability were no limit, but instead a timeframe in which astral beauty could be seen, absorbed, and known.
         Each planet underwent an ego death and observed cosmic deaths far and near, yet still they spun.
         They orbited. They persisted. They observed. And they remained.
         The primordial soup of the infinite universe was unforgiving, vicious, and deadly.
