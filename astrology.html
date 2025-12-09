@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Astronomical Journey</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="astrology.css">
+</head>
+
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="stars.mp4" type="video/mp4">
+    </video>
+
+    <div id="intro-wrapper">
+
+        <div id="intro-header">
+            <h1>Astrological Journey</h1>
+            <h2 class="float">A poetic trip through the stars inside us</h2>
+        </div>
+
+        <!-- BUTTON MOVED OUTSIDE THE HEADER -->
+        <button id="start-btn">Start Journey</button>
+
+    </div>
+
+    <div id="constellation-screen">
+
+        <div id="constellation-wrapper">
+            <svg id="constellation"></svg>
+        </div>
+
+        <!-- BOTTOM: Info Panel -->
+        <div id="info-panel">
+            <h1 id="info-title">Primordial Chaos</h1>
+            <h3 id="info-subtitle">The unshaped beginning</h3>
+
+            <p id="info-body">
+                Your poem or description will go here...
+            </p>
+        </div>
+                <!-- LEFT ARROW -->
+        <button id="arrow-left" class="arrow-btn">←</button>
+
+        <!-- RIGHT ARROW -->
+        <button id="arrow-right" class="arrow-btn">→</button>
+    </div>
+
+</body>
+
+<script src="astrology.js"></script>
+</html>

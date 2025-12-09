@@ -1,0 +1,294 @@
+/* BASIC RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+#bg-video {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* FULLSCREEN CONTAINER */
+#intro-wrapper {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    gap: 100px;
+}
+
+/* HEADER GROUP */
+#intro-header {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    text-align: center;
+
+    gap: 40px;
+    font-size: 40px;
+
+    color: hsla(44, 22%, 94%, 0.9);
+}
+
+#intro-header h2 {
+    font-size: 25px;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+/* BUTTON (SEPARATE CHILD → can animate freely) */
+#start-btn {
+    padding: 16px 40px;
+    font-size: 1.5rem;
+
+    border: none;
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.18);
+    color: white;
+    backdrop-filter: blur(8px);
+
+    cursor: pointer;
+    transition: 0.25s;
+    box-shadow: 0 0 25px rgba(200,150,255,0.6);
+}
+
+/* FLOAT ANIMATION */
+.float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* CLICK ANIMATIONS */
+
+.zoom-out-up {
+    animation: zoomUp 1.6s ease forwards;
+}
+@keyframes zoomUp {
+    0% { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(-200px) scale(1.3); }
+}
+
+.zoom-out-down {
+    animation: zoomDown 1.6s ease forwards;
+}
+@keyframes zoomDown {
+    0% { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(200px) scale(1.15); }
+}
+
+.fade-out-scale {
+    animation: fadeShrink 1.2s ease forwards;
+}
+@keyframes fadeShrink {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.4); }
+}
+
+/* FADE ENTIRE INTRO WHEN TEXT IS DONE */
+.intro-wrapper-hide {
+    animation: hideIntro 0.8s ease forwards;
+    animation-delay: 1.6s;
+}
+@keyframes hideIntro {
+    to { opacity: 0; visibility: hidden; }
+}
+
+/* DISABLE CLICKS DURING ANIMATION */
+.unclickable {
+    pointer-events: none;
+}
+
+
+/* After intro*/
+/* Hide constellation screen until intro is gone */
+#constellation-screen {
+    display: none;       /* will show after intro removal */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    color: white;
+}
+
+
+/* ======= CONSTELLATION (TOP 25%) ======= */
+
+#constellation-wrapper {
+    width: 90%;
+    margin: 0 auto;
+
+    height: 20vh;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;                /* NEW */
+    align-items: center;          /* NEW → centers vertically */
+    justify-content: center;      /* optional, centers horizontally */
+}
+
+#constellation {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+/* Node starts invisible + slightly down */
+.node {
+    fill: white;
+    r: 5;
+    opacity: 0;
+    transform: translateY(15px);
+    filter: drop-shadow(0 0 5px white);
+}
+
+/* Line starts invisible */
+.line {
+    stroke: rgba(255,255,255,0.7);
+    stroke-width: 1.5;
+    opacity: 0;
+}
+
+/* Node fade-in animation */
+.node-appear {
+    animation: nodeIn 0.8s ease forwards;
+}
+
+@keyframes nodeIn {
+    0% { opacity: 0; transform: translateY(15px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Line fade-in animation */
+.line-appear {
+    animation: lineIn 0.8s ease forwards;
+}
+
+@keyframes lineIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* ACTIVE NODE */
+.active-node {
+    r: 7.2 !important;
+    filter: drop-shadow(0 0 10px white) drop-shadow(0 0 18px white);
+    opacity: 1 !important;
+}
+
+
+/* ======= INFO PANEL (BOTTOM 75%) ======= */
+
+#info-panel {
+    position: absolute;
+    top: 25vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 60vw;
+    /*height: 70vh;*/
+
+    padding: 30px;
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+
+    box-shadow: 0 0 25px rgba(255,255,255,0.3);
+}
+
+#info-panel h1 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px rgba(255,255,255,0.9);
+}
+
+#info-panel h3 {
+    font-size: 1.3rem;
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+#info-panel p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+#info-panel * {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.panel-fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.panel-fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ARROW BUTTONS */
+
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 20px rgba(255,255,255,0.25);
+
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+/* Left arrow positioned left of panel */
+#arrow-left {
+    left: 5%;
+}
+
+/* Right arrow positioned right of panel */
+#arrow-right {
+    right: 5%;
+}
+
+.arrow-btn:hover {
+    background: rgba(255,255,255,0.28);
+    transform: translateY(-50%) scale(1.15);
+}
